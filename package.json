@@ -1,0 +1,39 @@
+{
+  "name": "@modelcontextprotocol/servers",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Model Context Protocol servers",
+  "license": "MIT",
+  "author": "yuru-sha",
+  "homepage": "https://github.com/yuru-sha/",
+  "bugs": "https://github.com/yuru-sha/mcp-server-dify/issues",
+  "type": "module",
+  "workspaces": [
+    "src/*"
+  ],
+  "files": [],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "watch": "npm run watch --workspaces",
+    "publish-all": "npm publish --workspaces --access public",
+    "link-all": "npm link --workspaces",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.ts\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server-dify": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.5.1",
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,100 @@
+app:
+  description: ランチに困ったときに使うと良いかもしれないチャットボット
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: chat
+  name: めしどこ
+  use_icon_as_answer_icon: false
+kind: app
+model_config:
+  agent_mode:
+    enabled: false
+    max_iteration: 5
+    strategy: function_call
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config: {}
+  completion_prompt_config: {}
+  dataset_configs:
+    datasets:
+      datasets: []
+    reranking_enable: false
+    retrieval_model: multiple
+    top_k: 4
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    allowed_file_types:
+    - image
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+    mode: chat
+    name: gemini-2.0-flash-exp
+    provider: google
+  more_like_this:
+    enabled: false
+  opening_statement: '場所、予算から美味しいランチのお店を教えて！どんなお店を探しているか教えてください。場所と予算を教えていただければ、あなたにぴったりのランチのお店をいくつか提案します。気軽に話しかけてくださいね！
+
+    '
+  pre_prompt: "``` xml\n<instruction>\n以下の指示に従って、美味しいランチのお店をおすすめしてください。\n\n1.  **場所の確認:**\
+    \ {{LOCATION}} を確認し、その場所周辺のランチスポットを調査します。\n2.  **予算の確認:** {{BUDGET}} を確認し、その予算内で楽しめるランチのお店を絞り込みます。予算は、例えば「1000円以内」「2000円程度」のように指定されます。\n\
+    3.  **お店の選定:** 場所と予算に基づいて、おすすめのランチのお店を3つ以上選定します。お店の選定基準は、味、雰囲気、口コミなどを考慮してください。\n\
+    4.  **お店の情報提供:** 選定したお店について、以下の情報を提供してください。\n    *   お店の名前\n    *   お店の場所（{{LOCATION}}からの距離やアクセス方法を含む）\n\
+    \    *   おすすめのメニューと価格\n    *   お店の特徴やアピールポイント\n5.  **出力形式:** 以下の形式で情報を出力してください。XMLタグは使用しないでください。\n\
+    \n    お店の名前: [お店の名前]\n    場所: [お店の場所]\n    おすすめメニュー: [おすすめメニューと価格]\n    特徴: [お店の特徴やアピールポイント]\n\
+    \n    お店の名前: [お店の名前]\n    場所: [お店の場所]\n    おすすめメニュー: [おすすめメニューと価格]\n    特徴: [お店の特徴やアピールポイント]\n\
+    \n    ... (必要に応じてお店を追加)\n\n</instruction>\n\n<input>\n場所: {{LOCATION}} (例: 東京駅)\n\
+    予算: {{BUDGET}} (例: 1500円以内)\n</input>\n\n<output>\nお店の名前: [お店の名前]\n場所: [お店の場所]\n\
+    おすすめメニュー: [おすすめメニューと価格]\n特徴: [お店の特徴やアピールポイント]\n\nお店の名前: [お店の名前]\n場所: [お店の場所]\n\
+    おすすめメニュー: [おすすめメニューと価格]\n特徴: [お店の特徴やアピールポイント]\n\nお店の名前: [お店の名前]\n場所: [お店の場所]\n\
+    おすすめメニュー: [おすすめメニューと価格]\n特徴: [お店の特徴やアピールポイント]\n</output>\n\n<example>\n場所: 新宿\n\
+    予算: 1000円以内\n\nお店の名前: 麺屋"
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    configs: []
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form:
+  - text-input:
+      default: ''
+      label: LOCATION
+      required: true
+      variable: LOCATION
+  - text-input:
+      default: ''
+      label: BUDGET
+      required: true
+      variable: BUDGET
+version: 0.1.5
