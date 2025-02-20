@@ -1,5 +1,7 @@
 # mcp-server-dify
 
+[![smithery badge](https://smithery.ai/badge/@yuru-sha/mcp-server-dify)](https://smithery.ai/server/@yuru-sha/mcp-server-dify)
+
 Model Context Protocol Server for Dify AI. This server enables LLMs to interact with Dify AI's chat completion capabilities through a standardized protocol.
 
 ## Features
@@ -11,6 +13,14 @@ Model Context Protocol Server for Dify AI. This server enables LLMs to interact 
 - TypeScript implementation
 
 ## Installation
+
+### Installing via Smithery
+
+To install MCP Server (Dify AI) for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@yuru-sha/mcp-server-dify):
+
+```bash
+npx -y @smithery/cli install @yuru-sha/mcp-server-dify --client claude
+```
 
 ### Using NPM
 
