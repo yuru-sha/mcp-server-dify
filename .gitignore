@@ -129,4 +129,11 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# SpecStory(cursor extension)
 .specstory/
+
+# cursor rules
+.cursorrules
+
+# windsurf rules
+.windsurfrules
