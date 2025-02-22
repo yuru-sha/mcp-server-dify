@@ -1,47 +1,40 @@
-.PHONY: all clean install build test lint format docker
+.PHONY: build lint format clean setup build docker help
 
-# デフォルトターゲット
-all: install build test
+# Initial setup
+setup:
+	npm install
 
-# 依存関係のインストール
-install:
-	npm ci
-
-# ビルド
+# Build the project
 build:
 	npm run build
 
-# テスト実行
-test:
-	npm test
-
-# リント実行
+# Run linter
 lint:
 	npm run lint
 
-# コードフォーマット
+# Format code
 format:
 	npm run format
 
-# クリーンアップ
+# Clean up
 clean:
-	rm -rf node_modules
 	rm -rf dist
-	rm -f package-lock.json
-
-# Dockerイメージのビルド
+	
+# Build Docker image
 docker:
-	docker build -t mcp/dify -f src/dify/Dockerfile .
+	docker build -t mcp/mysql .
 
-# 開発用のセットアップ
-setup: clean install
+# Show help
+help:
+	@echo 'Usage: make [target]'
+	@echo ''
+	@echo 'Targets:'
+	@echo '  setup    Initial setup'
+	@echo '  build    Build the project'
+	@echo '  lint     Run linter'
+	@echo '  format   Format code'
+	@echo '  clean    Clean up build artifacts'
+	@echo '  docker   Build Docker image'
+	@echo '  help     Show this help message'
 
-# # パッケージの公開
-# publish:
-# 	npm run publish-all
-
-# 継続的な開発用のウォッチモード
-watch:
-	npm run watch
-
-.DEFAULT_GOAL := all 
+.DEFAULT_GOAL := build

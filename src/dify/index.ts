@@ -12,7 +12,7 @@ import axios from "axios";
 
 const server = new Server(
   {
-    name: "example-servers/dify",
+    name: "mcp-server-dify",
     version: "0.1.0",
   },
   {
@@ -20,13 +20,13 @@ const server = new Server(
       resources: {},
       tools: {},
     },
-  },
+  }
 );
 
 const args = process.argv.slice(2);
 if (args.length < 2) {
   console.error(
-    "Please provide a Dify API endpoint and API key as a command-line argument",
+    "Please provide a Dify API endpoint and API key as a command-line argument"
   );
   process.exit(1);
 }
@@ -104,7 +104,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   throw new Error(`Unknown tool: ${request.params.name}`);
 });
 
-async function runServer() {
+async function runServer(): Promise<void> {
   const transport = new StdioServerTransport();
   await server.connect(transport);
 }

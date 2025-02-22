@@ -1,39 +1,38 @@
 {
-  "name": "@modelcontextprotocol/servers",
-  "private": true,
+  "name": "@modelcontextprotocol/server-dify",
   "version": "0.1.0",
-  "description": "Model Context Protocol servers",
+  "description": "MCP server for interacting with Dify AI",
   "license": "MIT",
   "author": "yuru-sha",
   "homepage": "https://github.com/yuru-sha/",
   "bugs": "https://github.com/yuru-sha/mcp-server-dify/issues",
   "type": "module",
-  "workspaces": [
-    "src/*"
+  "bin": {
+    "mcp-server-dify": "./dist/index.js"
+  },
+  "files": [
+    "dist"
   ],
-  "files": [],
   "scripts": {
-    "build": "npm run build --workspaces",
-    "watch": "npm run watch --workspaces",
-    "publish-all": "npm publish --workspaces --access public",
-    "link-all": "npm link --workspaces",
-    "test": "jest",
+    "build": "tsc && shx chmod +x dist/*.js",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.ts\""
   },
   "dependencies": {
-    "@modelcontextprotocol/server-dify": "^0.1.0"
+    "@modelcontextprotocol/sdk": "1.0.1",
+    "axios": "^1.6.7"
   },
   "devDependencies": {
+    "@eslint/js": "^8.56.0",
+    "@modelcontextprotocol/inspector": "0.4.1",
     "@types/node": "^20.11.19",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "eslint": "^8.56.0",
-    "prettier": "^3.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "globals": "^13.23.0",
+    "prettier": "^2.8.4",
     "shx": "^0.3.4",
-    "typescript": "^5.6.2"
-  },
-  "engines": {
-    "node": ">=18.0.0"
+    "typescript": "^5.6.2",
+    "vitest": "^3.0.6"
   }
 }

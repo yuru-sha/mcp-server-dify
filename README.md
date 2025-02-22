@@ -1,4 +1,5 @@
 # mcp-server-dify
+[![CI Status](https://github.com/yuru-sha/mcp-server-dify/actions/workflows/ci.yml/badge.svg)](https://github.com/yuru-sha/mcp-server-dify/actions)
 
 Model Context Protocol Server for Dify AI. This server enables LLMs to interact with Dify AI's chat completion capabilities through a standardized protocol.
 
