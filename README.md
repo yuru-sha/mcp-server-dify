@@ -85,16 +85,16 @@ npm run lint:fix
 npm run publish-all
 ```
 
+## License
+
+This project is released under the [MIT License](LICENSE).
+
 ## Security
 
 This server interacts with Dify AI using your provided API key. Ensure to:
 - Keep your API credentials secure
 - Use HTTPS for the API endpoint
 - Never commit API keys to version control
-
-## License
-
-MIT License - see LICENSE file for details.
 
 ## Contributing
 
