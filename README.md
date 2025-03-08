@@ -57,32 +57,18 @@ Parameters:
 
 ## Development
 
-This project uses a monorepo structure with workspaces. The main server implementation is in the `src/dify` directory.
-
-### Setup
-
 ```bash
-# Install dependencies
-npm install
+# Initial setup
+make setup
 
-# Build all packages
-npm run build
+# Build the project
+make build
 
-# Development mode with watch
-npm run watch
+# Format code
+make format
 
 # Run linter
-npm run lint
-
-# Fix linting issues
-npm run lint:fix
-```
-
-### Publishing
-
-```bash
-# Publish all packages
-npm run publish-all
+make lint
 ```
 
 ## License

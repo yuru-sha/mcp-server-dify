@@ -57,32 +57,18 @@ Dify AIと連携するレストラン推薦ツール：
 
 ## 開発
 
-このプロジェクトはワークスペースを持つモノレポ構造を使用しています。主要なサーバー実装は`src/dify`ディレクトリにあります。
-
-### セットアップ
-
 ```bash
-# 依存関係のインストール
-npm install
+# Initial setup
+make setup
 
-# すべてのパッケージをビルド
-npm run build
+# Build the project
+make build
 
-# 監視モードでの開発
-npm run watch
+# Format code
+make format
 
-# リンターの実行
-npm run lint
-
-# リンターの問題を修正
-npm run lint:fix
-```
-
-### 公開
-
-```bash
-# すべてのパッケージを公開
-npm run publish-all
+# Run linter
+make lint
 ```
 
 ## ライセンス
