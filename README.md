@@ -13,10 +13,14 @@ Model Context Protocol Server for Dify AI. This server enables LLMs to interact 
 
 ## Installation
 
-### Using NPM
+### Using Docker
 
 ```bash
-npm install @modelcontextprotocol/server-dify
+# Build the Docker image
+make docker
+
+# Run with Docker
+docker run -i --rm mcp/dify https://your-dify-api-endpoint your-dify-api-key
 ```
 
 ## Usage
