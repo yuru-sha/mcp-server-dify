@@ -13,10 +13,14 @@ Dify AI用のModel Context Protocolサーバーです。このサーバーは、
 
 ## インストール
 
-### NPMを使用
+### Dockerを使用する場合
 
 ```bash
-npm install @modelcontextprotocol/server-dify
+# Dockerイメージのビルド
+make docker
+
+# コンテナの起動
+docker run -i --rm mcp/dify https://your-dify-api-endpoint your-dify-api-key
 ```
 
 ## 使用方法
