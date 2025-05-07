@@ -29,5 +29,9 @@ ENV NODE_ENV=production
 # 本番用の依存関係をインストール
 RUN npm ci --ignore-scripts --omit-dev
 
+# Use a non-root user for security (optional)
+RUN adduser -D mcpuser
+USER mcpuser
+
 # アプリケーションを実行
 ENTRYPOINT ["node", "dist/index.js"]
