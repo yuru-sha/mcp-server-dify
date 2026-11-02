@@ -24,12 +24,8 @@
     "axios": "^1.6.7"
   },
   "devDependencies": {
-    "@eslint/js": "^8.56.0",
     "@modelcontextprotocol/inspector": "2.13.0",
     "@types/node": "^20.11.19",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
-    "globals": "^17.13.0",
     "prettier": "^3.9.10",
     "shx": "^0.3.4",
     "typescript": "^7.0.2",
