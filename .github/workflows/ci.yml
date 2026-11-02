@@ -23,6 +23,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+
+      - name: Export normalized lockfile (temporary)
+        run: |
+          echo "LOCKFILE_EXPORT_BEGIN"
+          base64 -w 76 package-lock.json
+          echo "LOCKFILE_EXPORT_END"
+
       - name: Build the project
         run: npm run build
 
