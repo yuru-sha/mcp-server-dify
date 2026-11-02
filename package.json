@@ -16,7 +16,7 @@
   "scripts": {
     "build": "tsc && shx chmod +x dist/*.js",
     "inspector": "npx @modelcontextprotocol/inspector build/index.js",
-    "lint": "npx --yes oxlint@1.90.0 --deny-warnings src",
+    "lint": "oxlint --deny-warnings src",
     "format": "prettier --write \"**/*.ts\""
   },
   "dependencies": {
@@ -29,6 +29,7 @@
     "prettier": "^3.9.10",
     "shx": "^0.3.4",
     "typescript": "^7.0.2",
-    "vitest": "^3.0.6"
+    "vitest": "^3.0.6",
+    "oxlint": "1.90.0"
   }
 }
