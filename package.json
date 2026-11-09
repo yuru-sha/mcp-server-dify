@@ -24,7 +24,7 @@
     "axios": "^1.6.7"
   },
   "devDependencies": {
-    "@modelcontextprotocol/inspector": "2.13.0",
+    "@modelcontextprotocol/inspector": "2.14.0",
     "@types/node": "^20.11.19",
     "prettier": "^3.9.10",
     "shx": "^0.3.4",
