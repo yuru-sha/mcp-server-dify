@@ -27,7 +27,7 @@
     "@modelcontextprotocol/inspector": "2.13.0",
     "@types/node": "^20.11.19",
     "prettier": "^3.9.10",
-    "shx": "^0.3.4",
+    "shx": "^0.4.0",
     "typescript": "^7.0.2",
     "vitest": "^3.0.6",
     "oxlint": "1.90.0"
